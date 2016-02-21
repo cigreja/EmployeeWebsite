@@ -1,7 +1,8 @@
 
-package com.cigreja.mavenproject1.config;
+package com.cigreja.employeewebsite.config;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 /**
  * RootConfig
@@ -9,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
  * @since  Feb 21, 2016
  */
 @Configuration
+//@Import(DataConfig.class)
 public class RootConfig {
 
 }

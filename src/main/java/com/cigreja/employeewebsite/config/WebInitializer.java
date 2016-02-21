@@ -1,5 +1,5 @@
 
-package com.cigreja.mavenproject1.config;
+package com.cigreja.employeewebsite.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

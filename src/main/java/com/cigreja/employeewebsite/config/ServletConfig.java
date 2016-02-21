@@ -1,5 +1,5 @@
 
-package com.cigreja.mavenproject1.config;
+package com.cigreja.employeewebsite.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -18,7 +18,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
  */
 @Configuration
 @EnableWebMvc
-@ComponentScan("com.cigreja.mavenproject1.controllers")
+@ComponentScan("com.cigreja.employeewebsite.controllers")
 public class ServletConfig extends WebMvcConfigurerAdapter {
 
     @Bean
@@ -26,6 +26,7 @@ public class ServletConfig extends WebMvcConfigurerAdapter {
         InternalResourceViewResolver vr = new InternalResourceViewResolver();
         vr.setPrefix("/WEB-INF/views/");
         vr.setSuffix(".jsp");
+        vr.setExposeContextBeansAsAttributes(true);
         return vr;
     }
     
@@ -34,8 +35,22 @@ public class ServletConfig extends WebMvcConfigurerAdapter {
 //        configurer.enable();
 //    }
     
+//    @Override
+//    public void addResourceHandlers (ResourceHandlerRegistry registry){
+//        super.addResourceHandlers(registry);
+//    }
+    
     @Override
-    public void addResourceHandlers (ResourceHandlerRegistry registry){
-        super.addResourceHandlers(registry);
+    public void addResourceHandlers(ResourceHandlerRegistry registry){
+        //registry.addResourceHandler("/assets/**").addResourceLocations("classpath:/META-INF/resources/webjars/").setCachePeriod(31556926);
+        //registry.addResourceHandler("/css/**").addResourceLocations("/css/").setCachePeriod(31556926);
+        //registry.addResourceHandler("/img/**").addResourceLocations("/img/").setCachePeriod(31556926);
+        //registry.addResourceHandler("/js/**").addResourceLocations("/js/").setCachePeriod(31556926);
+        registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+    }
+    
+    @Override
+    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer){
+        configurer.enable();
     }
 }
