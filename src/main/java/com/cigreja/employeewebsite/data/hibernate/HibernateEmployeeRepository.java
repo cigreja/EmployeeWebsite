@@ -1,5 +1,5 @@
 
-package com.cigreja.employeewebsite.data;
+package com.cigreja.employeewebsite.data.hibernate;
 
 import com.cigreja.employeewebsite.business.Employee;
 import java.io.Serializable;
@@ -7,6 +7,7 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -14,11 +15,12 @@ import org.springframework.stereotype.Repository;
  * @author Carlos Igreja
  * @since  Feb 19, 2016
  */
-@Repository
+//@Repository
 public class HibernateEmployeeRepository {
     
     SessionFactory sessionFactory;
     
+    @Autowired
     public HibernateEmployeeRepository(SessionFactory sessionFactory){
         this.sessionFactory = sessionFactory;
     }

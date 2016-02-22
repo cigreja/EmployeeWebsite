@@ -1,5 +1,5 @@
 
-package com.cigreja.employeewebsite.data;
+package com.cigreja.employeewebsite.data.jdbc;
 
 /**
  * UserDAO

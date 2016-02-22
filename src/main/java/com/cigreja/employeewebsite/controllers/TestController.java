@@ -1,8 +1,10 @@
 
 package com.cigreja.employeewebsite.controllers;
 
+import com.cigreja.employeewebsite.data.hibernate.HibernateTestRepository;
 import java.util.HashMap;
 import javax.servlet.http.HttpServletRequest;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
@@ -17,6 +19,9 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/Test")
 public class TestController {
 
+    @Autowired
+    private HibernateTestRepository repository;
+    
     @RequestMapping(method = POST)
     public ModelAndView test(HttpServletRequest request){
         HashMap<String,String> model = new HashMap<>();

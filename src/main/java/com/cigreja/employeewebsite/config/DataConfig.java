@@ -3,8 +3,10 @@ package com.cigreja.employeewebsite.config;
 
 import java.util.Properties;
 import javax.sql.DataSource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -22,6 +24,7 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
  */
 @Configuration
 //@EnableJpaRepositories("com.cigreja.employeewebsite.data")
+//@ComponentScan("com.cigreja.employeewebsite.data")
 public class DataConfig {
 
     @Bean
@@ -45,6 +48,7 @@ public class DataConfig {
     }
     
     @Bean
+    //@Autowired // doesn't break
     public LocalSessionFactoryBean sessionFactory(DataSource dataSource){
         
         String[] packagesToScan = {"com.cigreja.employeewebsite.business",

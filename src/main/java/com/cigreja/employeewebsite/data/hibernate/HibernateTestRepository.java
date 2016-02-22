@@ -1,5 +1,5 @@
 
-package com.cigreja.employeewebsite.data;
+package com.cigreja.employeewebsite.data.hibernate;
 
 import com.cigreja.employeewebsite.business.Employee;
 import com.cigreja.employeewebsite.business.Test;
@@ -8,16 +8,20 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 /**
  * HibernateTestRepository
  * @author Carlos Igreja
  * @since  Feb 22, 2016
  */
+@Repository
 public class HibernateTestRepository {
 
     SessionFactory sessionFactory;
     
+    @Autowired
     public HibernateTestRepository(SessionFactory sessionFactory){
         this.sessionFactory = sessionFactory;
     }

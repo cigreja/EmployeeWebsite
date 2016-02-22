@@ -1,5 +1,5 @@
 
-package com.cigreja.employeewebsite.data;
+package com.cigreja.employeewebsite.data.jpa;
 
 import com.cigreja.employeewebsite.business.Employee;
 import javax.persistence.EntityManager;
@@ -14,8 +14,8 @@ import org.springframework.stereotype.Repository;
  * @author Carlos Igreja
  * @since  Feb 21, 2016
  */
-@Repository
-@Transactional
+//@Repository
+//@Transactional
 public class JPARepository {
     
 //    @PersistenceUnit

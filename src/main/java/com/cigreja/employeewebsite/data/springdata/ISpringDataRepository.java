@@ -1,4 +1,4 @@
-package com.cigreja.employeewebsite.data;
+package com.cigreja.employeewebsite.data.springdata;
 
 import com.cigreja.employeewebsite.business.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;

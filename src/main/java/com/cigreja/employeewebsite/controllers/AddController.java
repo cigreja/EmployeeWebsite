@@ -2,7 +2,7 @@
 package com.cigreja.employeewebsite.controllers;
 
 import com.cigreja.employeewebsite.business.Employee;
-import com.cigreja.employeewebsite.data.HibernateEmployeeRepository;
+import com.cigreja.employeewebsite.data.hibernate.HibernateEmployeeRepository;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
