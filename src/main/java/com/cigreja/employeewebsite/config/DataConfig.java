@@ -24,25 +24,25 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 //@EnableJpaRepositories("com.cigreja.employeewebsite.data")
 public class DataConfig {
 
-//    @Bean
-//    public DataSource datasource(){
-//        
-//        String driverClassName = "com.mysql.jdbc.Driver";
-//        String username = "root";
-//        String password = "";
-//        String host = "localhost";
-//        String port = "3306";
-//        String database = "hibernateDB";
-//        String url = "jdbc:mysql://" + host + ":" + port + "/" + database;
-//        
-//        DriverManagerDataSource ds = new DriverManagerDataSource();
-//        ds.setDriverClassName(driverClassName);
-//        ds.setUrl(url);
-//        ds.setUsername(username);
-//        ds.setPassword(password);
-//        
-//        return ds;
-//    }
+    @Bean
+    public DataSource datasource(){
+        
+        String driverClassName = "com.mysql.jdbc.Driver";
+        String username = "root";
+        String password = "";
+        String host = "localhost";
+        String port = "3306";
+        String database = "hibernateDB";
+        String url = "jdbc:mysql://" + host + ":" + port + "/" + database;
+        
+        DriverManagerDataSource ds = new DriverManagerDataSource();
+        ds.setDriverClassName(driverClassName);
+        ds.setUrl(url);
+        ds.setUsername(username);
+        ds.setPassword(password);
+        
+        return ds;
+    }
     
 //    @Bean
 //    public LocalSessionFactoryBean sessionFactory(DataSource dataSource){
