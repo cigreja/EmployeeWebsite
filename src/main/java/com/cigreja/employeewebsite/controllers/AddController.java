@@ -2,7 +2,7 @@
 package com.cigreja.employeewebsite.controllers;
 
 import com.cigreja.employeewebsite.business.Employee;
-import com.cigreja.employeewebsite.data.HibernateRepository;
+import com.cigreja.employeewebsite.data.HibernateEmployeeRepository;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -25,7 +25,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping(value = "/Add")
 public class AddController {
     
-    HibernateRepository hibernateRepository;
+    HibernateEmployeeRepository hibernateRepository;
 
     @RequestMapping(method = POST)
     public ModelAndView add(HttpServletRequest request){

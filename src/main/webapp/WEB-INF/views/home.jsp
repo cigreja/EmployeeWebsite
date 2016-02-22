@@ -131,5 +131,30 @@
                 </div>
             </div>
         </center>
+        <center>
+            <div class="divContainer">
+                <div class="divHeader">
+                    TEST HIBERNATE
+                    <div class="divBody" >
+                        <p>Enter Test Data to DB</p>
+                        <form name="testForm" action="Test" method="POST">
+                            <table border="1">
+                                <tbody>
+                                    <tr>
+                                        <td>First Name : </td>
+                                        <td><input type="text" name="firstName" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Last Name : </td>
+                                        <td><input type="text" name="lastName" /></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <input type="submit" value="Submit" name="submitBtn" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </center>
     </body>
 </html>

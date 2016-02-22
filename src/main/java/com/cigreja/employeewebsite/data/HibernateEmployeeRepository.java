@@ -10,16 +10,16 @@ import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
 /**
- * HibernateRepository
+ * HibernateEmployeeRepository
  * @author Carlos Igreja
  * @since  Feb 19, 2016
  */
 @Repository
-public class HibernateRepository {
+public class HibernateEmployeeRepository {
     
     SessionFactory sessionFactory;
     
-    public HibernateRepository(SessionFactory sessionFactory){
+    public HibernateEmployeeRepository(SessionFactory sessionFactory){
         this.sessionFactory = sessionFactory;
     }
     
@@ -43,8 +43,8 @@ public class HibernateRepository {
     
     public Employee findByFirstName(String firstName){
         return (Employee) currentSession()
-                .createCriteria(Object.class)
-                .add(Restrictions.eq("username", firstName))
+                .createCriteria(Employee.class)
+                .add(Restrictions.eq("firstName", firstName))
                 .list()
                 .get(0);
     }
