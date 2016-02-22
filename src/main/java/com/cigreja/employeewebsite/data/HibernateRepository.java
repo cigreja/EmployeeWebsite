@@ -1,6 +1,7 @@
 
 package com.cigreja.employeewebsite.data;
 
+import com.cigreja.employeewebsite.business.Employee;
 import java.io.Serializable;
 import java.util.List;
 import org.hibernate.Session;
@@ -30,25 +31,25 @@ public class HibernateRepository {
         return findAll().size();
     }
     
-    public Object save(Object o){
-        Serializable id = currentSession().save(o);
+    public Employee save(Employee employee){
+        Serializable id = currentSession().save(employee);
         
-        return o; // return new object
+        return employee; // return new object
     }
     
-    public Object findOne(long id){
-        return (Object) currentSession().get(Object.class,id);
+    public Employee findOne(int id){
+        return (Employee) currentSession().get(Employee.class,id);
     }
     
-    public Object findByUserName(String username){
-        return (Object) currentSession()
+    public Employee findByFirstName(String firstName){
+        return (Employee) currentSession()
                 .createCriteria(Object.class)
-                .add(Restrictions.eq("username", username))
+                .add(Restrictions.eq("username", firstName))
                 .list()
                 .get(0);
     }
     
-    public List<Object> findAll(){
-        return (List<Object>) currentSession().createCriteria(Object.class).list();
+    public List<Employee> findAll(){
+        return (List<Employee>) currentSession().createCriteria(Employee.class).list();
     }
 }

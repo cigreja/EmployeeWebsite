@@ -44,24 +44,24 @@ public class DataConfig {
         return ds;
     }
     
-//    @Bean
-//    public LocalSessionFactoryBean sessionFactory(DataSource dataSource){
-//        
-//        String[] packagesToScan = {"com.cigreja.employeewebsite.business",
-//                                   "com.cigreja.employeewebsite.data"};  
-//        
-//        String hibernateDialect = "org.hibernate.dialect.MySQL5Dialect";
-//        
-//        Properties hibernateProperties = new Properties();
-//        hibernateProperties.setProperty("dialect", hibernateDialect);
-//        
-//        LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
-//        sessionFactory.setDataSource(dataSource);
-//        sessionFactory.setPackagesToScan(packagesToScan);
-//        sessionFactory.setHibernateProperties(hibernateProperties);
-//
-//        return sessionFactory;
-//    }
+    @Bean
+    public LocalSessionFactoryBean sessionFactory(DataSource dataSource){
+        
+        String[] packagesToScan = {"com.cigreja.employeewebsite.business",
+                                   "com.cigreja.employeewebsite.data"};  
+        
+        String hibernateDialect = "org.hibernate.dialect.MySQL5Dialect";
+        
+        Properties hibernateProperties = new Properties();
+        hibernateProperties.setProperty("dialect", hibernateDialect);
+        
+        LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
+        sessionFactory.setDataSource(dataSource);
+        sessionFactory.setPackagesToScan(packagesToScan);
+        sessionFactory.setHibernateProperties(hibernateProperties);
+
+        return sessionFactory;
+    }
     
 //    @Bean
 //    // exception handling
