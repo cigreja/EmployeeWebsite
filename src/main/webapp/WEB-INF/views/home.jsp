@@ -15,7 +15,6 @@
         <title>title</title>
     </head>
     <body>
-        ${msg}
         <div id="header">
             Employee Website
         </div>
@@ -116,6 +115,7 @@
                                     </tr>
                                 </table>
                             </div>
+                            <input type="submit" value="Submit">
                         </form>
                     </div>
                 </div>
