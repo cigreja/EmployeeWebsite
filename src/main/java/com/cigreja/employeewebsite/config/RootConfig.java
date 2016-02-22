@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Import;
  * @since  Feb 21, 2016
  */
 @Configuration
-//@Import(DataConfig.class)
+@Import(DataConfig.class)
 public class RootConfig {
 
 }
